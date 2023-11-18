@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="jquery.js"></script>
+<script src="jquery.mobile.js"></script>
+<script src="jquery.css.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portifolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f83cea0efc.js" crossorigin="anonymous"></script>
+</head>
+
+</html>
+
+<body>
+    <div data-role="page" id="page1"></div>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Development Student</p>
+                <h1>Hi, I`m <span>Blenda</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------------about-------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/foto perfil2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I`m a very hardworking person, I like to always learn new and challenging things.
+                        I handle multitasking very well and enjoy working in a team. I am a helpful person, I like to
+                        help co-workers whenever possible.
+                        I always have a good relationship with co-workers. I find it easy to understand new things.
+                        I am a very curious and interested person. I am proactive person, I go beyond my services.
+                        I'm always taking courses to update myself and be more productive for work.
+                        I am an organized person and attentive to details. I am a reliable and discreet person,
+                        I respect the institution's rules, procedures and policies. I am punctual with schedules and I
+                        do not lack service.
+                        I am against any kind of discrimination or prejudice. I generally prefer quiet work
+                        environments, however,
+                        I also know how to work under pressure. I am very demanding with myself and I always want to
+                        surpass myself.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Database, SQL, Power BI</span></li>
+                            <li><span>HTM, CSS, </span></li>
+                            <li><span>Pyton</span></li>
+                            <li><span>Javascript</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>Sterling College</span> in partnership with Red Deer Polytechnic<br> Diploma in
+                                progress (2022- Dec, 2023)</li>
+                            <li><span>Linkedin Learning courses </span><br>Certificates (2022-2023)</li>
+                            <li><span>Udemy Courses</span><br>Certificates (2023)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------services------------------------------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-brands fa-unity"></i>></i>
+                        <h2>Unity</h2>
+                        <p>Games 3D</p>
+                        <a href="images/spaceship game(1).mp4" class="btn btn2">SpaceShip</a>
+                        <a href="./Unity3D-coinsCollect.mp4" class="btn btn2">CoinsCollect</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-js"></i>
+                        <h2>Javascript, HTML, CSS </h2>
+                        <p>Projects</p>
+                        <a href="./temperature/index.html" class="btn btn2">Temperature</a>
+                        <a href="./calculate5/index.html" class="btn btn2">Area Calculate</a>
+                        <a href="./AgeCalculater/index.html" class="btn btn2">Age Calculater</a>
+                        <a href="./dinamic_Table6/index.html" class="btn btn2">Dinamic table Calculater</a>
+                        <a href="./DateCalculater2/index.html" class="btn btn2">Date Calculater</a>
+                        <a href="./tryroid12/index.html" class="btn btn2">Tyroide APP</a>
+                        <a href="./Store4/index.html" class="btn btn2">Virtual Store</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-python"></i>
+                        <h2>Pyton</h2>
+                        <p>Projects</p>
+                        <a href="./FinalProject/__pycache__/" class="btn btn2">Company query and registration
+                            system
+                            using
+                            API</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------portfolio--------------------------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title"> My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="./hotel_data_Analytics1.png">
+                        <img src="./hotel_data_Analytics2.png">
+                        <img src="./hotel_data_analitys3.png">
+                        <img src="./hotel_data_Analytics4.png">
+                        <div class="layer"> </div>
+                        <h3>Power BI</h3>
+                        <p>Hotel Report</p>
+                        <a href="https://app.powerbi.com/groups/08b23163-3b6f-4502-91b2-fbd6fef0ccc7/reports/a994021d-767c-4339-95df-dab006f3c4d1/ReportSection?redirectedFromSignup=1&experience=power-bi"
+                            class="btn">See more
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-1.png">
+                    <div class="layer"> </div>
+                    <h3>Power BI</h3>
+                    <p>Hotel Report</p>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMzc0OWFiZTItYWZlYy00NjlhLTgwNzUtMzRhNDA5ODkwZmZjIiwidCI6IjQxZmE0OWQzLTE0YmUtNGNlZi05YzAxLTA4YjZlMDYyNmMwYyJ9"
+                        class="btn">See more
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-----------------------Contact---------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>blendacdomingos@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+5563992049336</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/blenda-domingos-7b808223b/">
+                                <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/BlendaTocantinsCosta/photos">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://github.com/blendadomingos">
+                                <i class="fa-brands fa-github"></i>
+
+                        </div>
+                        <a href="./Software development intern_RESUME.doc" class="btn btn2">Download Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright <i class="fa-sharp fa-solid fa-heart"></i> Blenda Domingos</p>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzf9ba7UxACpUDwfSlBiyjTZ1mt9Kmpa1lA2bd70WpSVMrTtyJ5rbF98H0doctu7ebQ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg");
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+</body>
+
+</html>

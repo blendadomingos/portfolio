@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Area Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    body {
+      background-color: #23382c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #80c1ab;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    input {
+      width: 100px;
+      padding: 8px;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Area Calculator</h1>
+    <h2>Area Circle</h2>
+    <p>Enter Radius:</p>
+    <input type="number" id="radiusInput" placeholder="Radius">
+    <p id="circleResult"></p>
+    <button onclick="calculateCircleArea()"><i class="fas fa-calculator"></i> Calculate Circle Area</button>
+    <br>
+    <br>
+    <h2>Area Square</h2>
+    <p>Enter side "a"</p>
+    <input type="number" id="sideInput" placeholder="side">
+    <p id="squareResult"></p>
+    <button onclick="calculateSquareArea()"><i class="fas fa-calculator"></i> Calculate Square Area</button>
+  </div>
+
+  <script src="https://kit.fontawesome.com/f83cea0efc.js" crossorigin="anonymous"></script>
+  <script>
+    function calculateCircleArea() {
+      var radius = parseFloat(document.getElementById('radiusInput').value);
+      var area = Math.PI * radius * radius;
+      document.getElementById('circleResult').innerText = 'Circle Area: ' + area.toFixed(2);
+    }
+   
+    function calculateSquareArea() {
+      var side = parseFloat(document.getElementById('sideInput').value);
+      var area = side * side;
+      document.getElementById('squareResult').innerText = 'Square Area: ' + area.toFixed(2);
+    }
+  </script>
+</body>
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f83cea0efc.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+</head>
+
+<body>
+  <section id="header">
+    <a href="#"><img src="./imagens/cuido_eu_logo1.jpg" class="logo" alt=""></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html ">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="client.html">Client</a></li>
+        <li id="lg-bag"><a href="#cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <a href="#" id="close"><i class="fa-solid fa-xmark"></i>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart"><i class="fa-solid fa-bag-shopping"></i></a>
+      <i id="bar" class="fa-solid fa-bars"></i>
+    </div>
+</section>
+<!-- Contact Page -->
+
+  <section id="page-header">
+
+    <h2>#Contact with Us</h2>
+    <h1>Cuido eu</h1>
+    <p>Register </p>
+
+  </section>
+  <!-- Contact Page -->
+  <section id="form-details">
+    <form id="registrationForm">
+        <br>
+<span>LEAVE A MESSAGE</span>
+<br>
+<h2>We love to hear from you</h2>
+
+<input type="text" id="name" required placeholder="Your Name">
+<input type="text" id= "email" required placeholder="Your E-mail">
+<input type="text"id= "phone" required placeholder="Your phone">
+<input type="text" id= "subject"required placeholder="Your Subject">
+<textarea name="" id="message" cols="" rows="10" placeholder="Your Message"></textarea>
+<button type="submit">Submit</button>
+    </form>
+    <div class="people">
+        <div>
+            <img src="imagens/hilena_instagram.png" alt="">
+            <p><span>Hilena Tocantins </span>Ceo Cuido Eu Pro<br>
+            Phone:+55 63 99789898 <br>Email: hilenatocantins@cuidoeu.com</p>
+        </div>
+        <div>
+            <img src="imagens/Murilo_profile.png" alt="">
+            <p><span>Murillo Carneiro </span>Vice-President Cuido Eu Pro<br>
+            Phone:+55 63 99789890 <br>Email: murillocarneiro@cuidoeu.com</p>
+        </div>
+        <div>
+            <img src="imagens/aurelia.png" alt="">
+            <p><span>Aurelia Santos </span>Sales Cuido Eu Pro<br>
+            Phone:+55 63 99787868 <br>Email: AureliaSantos@cuidoeu.com</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Client Page -->
+  <section id="client" class="section-p1">
+    <!-- Display submitted data here -->
+    <div id="clientData">
+      <!-- Client data will be dynamically added here using JavaScript -->
+    </div>
+  </section>
+
+</html>
+  <div class="title-container">
+  <section id="product1" class="section-p1">
+    <!-- Resto da seção -->
+ 
+  <section id="product2" class="section-p1">
+    <!-- Resto da seção -->
+  </section>
+
+
+   
+
+</body>
+<footer class="section-p1">
+<div class="col">
+  <img class="log" src="imagens/cuido_eu_logo.png" alt="">
+  <h4>Contact</h4>
+  <p><strong>Adress:</strong> Quadra 22, alameda 10, casa 10, Palmas-TO- Brazil</p>
+  <p><strong>Phone:</strong> +55 63 92920000</p>
+  <p><strong>Hour:</strong> 08-18:00, Monday- Saturday</p>
+    <div class="follow">
+      <h4>Follow us</h4>
+      <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+</div>
+</div>
+<div class="col">
+  <h4>About</h4>
+  <a href="#">About us</a>
+  <a href="#">Delivey Information</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms & Conditions</a>
+  <a href="#">Contact Us</a>
+</div>
+<div class="col">
+  <h4>My Account</h4>
+  <a href="#">About us</a>
+  <a href="#">Sign In</a>
+  <a href="#">View Cart</a>
+  <a href="#">My Wishlist</a>
+  <a href="#">Track My Order</a>
+  <a href="#">Help</a>
+</div>
+<div class="col install">
+  <h4>Install App</h4>
+  <p>From App Store or google Play</p>
+  <div class="row">
+  <i class="fa-brands fa-cc-paypal"></i>
+  <i class="fa-brands fa-google-pay"></i>
+  
+  <p>Secured Payment Gateways</p>
+  <i class="fa-brands fa-cc-visa"></i>
+  <i class="fa-brands fa-cc-mastercard"></i>
+  <i class="fa-brands fa-cc-amex"></i>
+  </div>
+</div>
+
+ <div class="copyright">
+  <p>@ Since 2020 Misturinha Pro - Cuido Eu - by Hilena Tocantins</p>
+ </div>
+
+</footer>
+
+<script>
+        // Check if there are already stored registrations and initialize the array
+        const registrations = JSON.parse(localStorage.getItem("registrations")) || [];
+
+        // Handle form submission
+        $("#registrationForm").submit(function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = $("#name").val();
+            const email= $ ("#email").val();
+            const phone = $("#phone").val();
+            const subject = $("#subject").val();
+            const message = $("#message").val();
+
+
+            // Create a registration object
+            const registrationData = {
+                name: name,
+                email: email,
+                phone: phone,
+                subject:subject,
+                message:message
+            };
+
+            // Push the registration object to the array
+            registrations.push(registrationData);
+
+            // Store updated array in local storage
+            localStorage.setItem("registrations", JSON.stringify(registrations));
+
+            // Clear the form inputs for the next registration
+            $("#name").val("");
+            $("#email").val("");
+            $("#phone").val("");
+            $("#subject").val("");
+            $("#message").val("");
+        });
+    </script>
+</body>
+</html>
+    
+
+

@@ -1,0 +1,28 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.container{
+   max-width: 800px; 
+   background:#ac390b;
+   border-radius:8px;
+   font-family: sans-serif;
+   padding: 20px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+
+}

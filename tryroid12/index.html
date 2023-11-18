@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://kit.fontawesome.com/f83cea0efc.js" crossorigin="anonymous"></script>
+
+  <title>Tryroid App</title>
+</head>
+<body>
+<div data-role="page" id="pageHome">
+  <div data-role="header">
+    <h1>Tryroid App</h1>
+    <div data-role="content">
+    <p>Please enter your password:</p>
+    <input type="password" id="passwordInput">
+    <p id="error"></p>
+    <a data-role="button" id="enterButton" type="submit" onclick="checkPassword()">ENTER PASSWORD</a>
+    <div class="controlgroup">
+      <div data-role="controlgroup" data-type="horizontal">
+        <button onclick="addValueToPassword(1)">1</button>
+        <button onclick="addValueToPassword(2)">2</button>
+        <button onclick="addValueToPassword(3)">3</button>
+        <button onclick="addValueToPassword(4)">4</button>
+        <button onclick="addValueToPassword(5)">5</button>
+        <button onclick="addValueToPassword(6)">6</button>
+        <button onclick="addValueToPassword(7)">7</button>
+        <button onclick="addValueToPassword(8)">8</button>
+        <button onclick="addValueToPassword(9)">9</button>
+        <button onclick="addValueToPassword(0)">0</button>
+        <button onclick="deleteLastCharacter()">Delete</button>
+      </div>
+    </div>
+    <div id="footer">
+      BlendaDomingos Company
+    </div>
+    <a href="#pageSuccess" data-role="button" id="nextButton" style="display: none;">Next</a>
+  </div>
+</div>
+</div>
+<!-- Password Success Page -->
+<div data-role="page" id="pageAgreement">
+  <div data-role="header">
+		<h1>Tryroid App</h1>
+  </div>
+  <div data-role="content">
+		<div id="congratulations">
+			<p>Congratulations, you managed to enter Tryroid!</p>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#menuPanel" data-rel="panel">Menu</a></li> <!-- Menu Option -->
+        </ul>
+        </div>
+      <div>
+      <a href="#pageAbou" data-role="button" id="nextButton" style="display: none;">Next</a>
+    </div>
+  </div>
+  </div>
+<!-- Agreement Page -->
+  <div data-role="content">
+    <h3>Term of Agreement</h3>
+    <p>Read the terms of agreement and company policy:</p>
+    <p>Accept or reject the agreement:</p>
+    <a href="#pageAbout" data-role="button" onclick="acceptAgreement()">Accept</a>
+    <a href="#pageHome" data-role="button" onclick="rejectAgreement()">Reject</a>
+  </div>
+</div>
+</div>
+
+<!-- About Page -->
+<div data-role="page" id="pageAbout">
+  <div data-role="header">
+    <h1>Tryroid App</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#menuPanel" data-rel="panel">Menu</a></li> 
+        
+        <!-- Menu Option -->
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h3>About BlendaDomingos Company</h3>
+    <p>This company by Blenda Domingos was founded by Blenda Domingos in the software development course at Sterling College in 2023.</p>
+    <a href="#pagePersonalData" data-role="button">Next</a>
+  </div>
+</div>
+
+<!-- Personal Data Page -->
+<!-- Personal Data Page -->
+<div data-role="page" id="pagePersonalData">
+  <div data-role="header">
+    <h1>Tryroid App</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#menuPanel" data-rel="panel">Menu</a></li> <!-- Menu Option -->
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h3>Fill in Personal Data</h3>
+    <form id="personalDataForm">
+      <label for="firstNameInput">First Name:</label>
+      <input type="text" id="firstNameInput">
+      <label for="lastNameInput">Last Name:</label>
+      <input type="text" id="lastNameInput">
+      <label for="telephoneInput">Telephone:</label>
+      <input type="tel" id="telephoneInput">
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput">
+      <label for="addressInput">Address:</label>
+      <input type="text" id="addressInput">
+      <label for="aboutInput">About You:</label>
+      <textarea id="aboutInput"></textarea>
+    </form>
+    <a href="#pageInfoUser" data-role="button" onclick="submitPersonalData()">Next</a>
+    <button id="updateButton" onclick="storePersonalData()"><i class="fas fa-save"></i> Update</button>
+  </div>
+</div>
+
+
+<!-- user Info -->
+<!-- User Info Page -->
+<div data-role="page" id="pageInfoUser">
+    <div data-role="header">
+      <h1>Tryroid App</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#menuPanel" data-rel="panel">Menu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content">
+      <h3>User Info</h3>
+      <div id="userInfoData"></div> <!-- Added div to display user's personal data -->
+      <a href="#pageAddReport" data-role="button">Next</a>
+    </div>
+  </div>
+  
+
+<!-- Add Report Page -->
+<div data-role="page" id="pageAddReport">
+  <div data-role="header">
+    <h1>Tryroid App</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#menuPanel" data-rel="panel">Menu</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h3>Add Report</h3>
+    <form id="addReportForm">
+      <label for="AddReportInput">Add Report</label>
+      <input type="text" id="AddReportInput">
+      <textarea id="AddReportInput"></textarea>
+    </form>
+    <a href="#pageSuccess" data-role="button" onclick="submitPersonalData('#pageSuccess')">Next</a>
+    <button id="updateReportButton" onclick="updateReport()">Update</button>
+  </div>
+</div>
+
+<!-- Success Page -->
+<div data-role="page" id="pageSuccess">
+  <div data-role="header">
+    <h1>Tryroid App</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#menuPanel" data-rel="panel">Menu</a></li> <!-- Menu Option -->
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <div id="congratulations">
+      <p>Congratulations, you have completed all the steps!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Menu Panel -->
+<div data-role="panel" id="menuPanel">
+    <ul data-role="listview">
+      <li><a href="#pageHome"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#pageAgreement"><i class="fas fa-file-alt"></i> Term of Agreement</a></li>
+      <li><a href="#pageAbout"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#pagePersonalData"><i class="fas fa-user-edit"></i> Fill in Personal Data</a></li>
+      <li><a href="#pageInfoUser"><i class="fas fa-user"></i> Info user</a></li>
+      <li><a href="#pageAddReport"><i class="fas fa-plus"></i> Add Report</a></li>
+      <li><a href="#" onclick="exitApp()"><i class="fas fa-sign-out-alt"></i> Exit</a></li>
+    </ul>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      $("#mobile").click(function() {
+        $("#menuPanel").panel("open");
+      });
+    });
+
+	function addValueToPassword(value) {
+		var passwordInput = document.getElementById("passwordInput");
+		passwordInput.value += value;
+	}
+
+	function deleteLastCharacter() {
+		var passwordInput = document.getElementById("passwordInput");
+		passwordInput.value = passwordInput.value.slice(0, -1);
+	}
+
+	function checkPassword() {
+		var passwordInput = document.getElementById("passwordInput");
+		var errorElement = document.getElementById("error");
+
+		if (passwordInput.value.length < 6 || passwordInput.value.length > 8) {
+			errorElement.textContent = "Please enter a password between 6 to 8 numbers.";
+		} else {
+			// Redirect to success page
+			$.mobile.changePage("#pageAgreement", { transition: "slide" });
+		}
+	}
+
+  function acceptAgreement() {
+    $.mobile.changePage("#pageAbout", { transition: "slide" });
+  }
+
+  function rejectAgreement() {
+    // Add your rejection logic here
+  }
+
+  function submitPersonalData() {
+    // Add your personal data submission logic here
+    $.mobile.changePage("#pageSuccess", { transition: "slide" });
+  }
+  function storePersonalData() {
+  var firstName = document.getElementById("firstNameInput").value;
+  var lastName = document.getElementById("lastNameInput").value;
+  var telephone = document.getElementById("telephoneInput").value;
+  var email = document.getElementById("emailInput").value;
+  var address = document.getElementById("addressInput").value;
+  var about = document.getElementById("aboutInput").value;
+
+  var personalData = {
+    firstName: firstName,
+    lastName: lastName,
+    telephone: telephone,
+    email: email,
+    address: address,
+    about: about
+  };
+
+  localStorage.setItem("personalData", JSON.stringify(personalData));
+
+  alert("Personal data updated successfully!");
+}
+
+function submitPersonalData() {
+  var firstName = document.getElementById("firstNameInput").value;
+  var lastName = document.getElementById("lastNameInput").value;
+  var telephone = document.getElementById("telephoneInput").value;
+  var email = document.getElementById("emailInput").value;
+  var address = document.getElementById("addressInput").value;
+  var about = document.getElementById("aboutInput").value;
+
+  var personalData = {
+    firstName: firstName,
+    lastName: lastName,
+    telephone: telephone,
+    email: email,
+    address: address,
+    about: about
+  };
+
+  localStorage.setItem("personalData", JSON.stringify(personalData));
+
+  // Update the userInfoData element with the user's personal data
+  var userInfoData = document.getElementById("userInfoData");
+  userInfoData.innerHTML = `
+    <p><strong>First Name:</strong> ${personalData.firstName}</p>
+    <p><strong>Last Name:</strong> ${personalData.lastName}</p>
+    <p><strong>Telephone:</strong> ${personalData.telephone}</p>
+    <p><strong>Email:</strong> ${personalData.email}</p>
+    <p><strong>Address:</strong> ${personalData.address}</p>
+    <p><strong>About:</strong> ${personalData.about}</p>
+  `;
+
+  $.mobile.changePage("#pageInfoUser", { transition: "slide" });
+}
+function updateReport() {
+  var reportInput = document.getElementById("AddReportInput").value;
+  var aboutInput = document.getElementById("aboutInput").value;
+
+  var reportData = {
+    report: reportInput,
+    about: aboutInput
+  };
+
+  // Store the report data in localStorage or any other desired storage mechanism
+  localStorage.setItem("reportData", JSON.stringify(reportData));
+
+  // Retrieve the stored personal data
+  var storedPersonalData = localStorage.getItem("personalData");
+  var personalData = JSON.parse(storedPersonalData);
+
+  // Update the userInfoData element with the updated user's personal data and report information
+  var userInfoData = document.getElementById("userInfoData");
+  userInfoData.innerHTML = `
+    <p><strong>First Name:</strong> ${personalData.firstName}</p>
+    <p><strong>Last Name:</strong> ${personalData.lastName}</p>
+    <p><strong>Telephone:</strong> ${personalData.telephone}</p>
+    <p><strong>Email:</strong> ${personalData.email}</p>
+    <p><strong>Address:</strong> ${personalData.address}</p>
+    <p><strong>About:</strong> ${personalData.about}</p>
+    <p><strong>Report:</strong> ${reportData.report}</p>
+    <p><strong>About Report:</strong> ${reportData.about}</p>
+  `;
+
+  $.mobile.changePage("#pageInfoUser", { transition: "slide" });
+}
+
+  function exitApp() {
+    document.body.style.backgroundColor = "black";
+    document.body.innerHTML = "<p style='color: white; text-align: center;'>Exit</p>";
+  }
+
+
+</script>
+
+</body>
+</html>

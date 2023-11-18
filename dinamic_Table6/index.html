@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: rgb(87, 135, 238);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+
+    input[type="number"] {
+      margin-bottom: 10px;
+    }
+
+    #tableContainer {
+      margin-top: 20px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: white;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .error-message {
+      color: white;
+      background-color: red;
+      padding: 5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .close-icon {
+      float: right;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2>Please enter a number:</h2>
+        <input type="number" id="numberInput" class="form-control" placeholder="Number">
+
+        <h2>Please enter a limit:</h2>
+        <input type="number" id="limitInput" class="form-control" placeholder="Limit">
+
+        <button id="calculateButton" class="btn btn-primary">Calculate</button>
+
+        <h2 class="mt-4">Dynamic Table:</h2>
+        <div id="tableContainer"></div>
+
+        <div class="error-message mt-4" id="errorMessage">
+          Invalid number. Please choose another number less than or equal to 30.
+          <span class="close-icon">&times;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

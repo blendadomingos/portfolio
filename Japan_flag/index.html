@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="jquery.js"></script>
+  <script src="jquery.mobile.js"></script>
+  <script src="jquery.css.js"></script>
+
+  <title>Japan Flag Creator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      max-width: 90%;
+      max-height: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .option-label {
+      margin-right: 10px;
+    }
+
+    .color-picker {
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="page1"></div>
+  <div class="options">
+    <div class="ui-field-contain">
+      <label class="option-label" for="color-picker">Flag Color:</label>
+      <input class="color-picker" type="color" id="color-picker">
+    </div>
+    <div class="ui-field-contain">
+      <label class="option-label" for="size-range">Flag Size:</label>
+      <input type="range" id="size-range" min="100" max="500" step="10" value="200">
+    </div>
+    <div class="ui-field-contain">
+      <label class="option-label" for="pole-checkbox">Show Pole:</label>
+      <input type="checkbox" id="pole-checkbox">
+    </div>
+  </div>
+  <canvas id="canvaelement" width="400" height="400"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

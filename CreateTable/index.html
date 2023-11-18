@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>create_table</title>
+</head>
+<body>
+<div class="container">
+    <div class="title">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 5px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th>ITEM</th>
+            <th>DESCRIPTION</th>
+        </tr>
+    </table>
+
+    <script>
+        // JavaScript code
+        var table = document.getElementById("myTable");
+
+        // Array of data
+        var data = [
+            ["List", "<ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>"],
+            ["Paragraph", "<p>Sterling College. Software Development course. App Mobile. Task create table. Student Blenda Domingos. Professor: Harneet Bhatia</p>"],
+            ["Portfolio Link", "<a href='http://blendadomingos.tech/'>Example Link</a>"],
+            ["Linkedin Link", "<a href='https://www.linkedin.com/in/blenda-domingos-7b808223b/'>Example Link</a>"],
+            ["Perfil Image", "<img src='background2.png' alt='Example Image'>"]
+        ];
+
+        // Loop through the data array and create rows and cells
+        for (var i = 0; i < data.length; i++) {
+            var row = table.insertRow(i + 1);
+            for (var j = 0; j < data[i].length; j++) {
+                var cell = row.insertCell(j);
+                cell.innerHTML = data[i][j];
+            }
+        }
+    </script>
+</body>
+</html>

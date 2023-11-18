@@ -1,0 +1,171 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+  background: #c1dbeb;
+  color:#000;
+}
+
+    #pageHome {
+      border: 5px solid black;
+      background-color: rgb(140, 193, 243);
+      padding: 15px;
+      margin: 5px 10px;
+      text-size-adjust: 32px;
+      width:100%;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+  
+    #menuPanel{
+
+      text-size-adjust: 32px;
+      width:200%;
+      image-resolution: no-repeat;
+      display: none; 
+      
+    }
+
+    
+ 
+  
+
+    #enterButton {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      text-align: center;
+      padding: 20px;
+      background-color: #1a579c;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    #nextButton{
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 5px;
+
+    }
+    .teclado {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f00303;
+      background-repeat:no-repeat;
+      color: black;
+      text-decoration: none;
+      border: 15px solid #6913cc;
+      border-radius: 5px;
+      width:90%;
+      padding: 40px;
+    }
+
+    .controlgroup {
+      width: 300px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      background-repeat:no-repeat;
+      color: black;
+      text-decoration: none;
+      box-sizing: 80px;
+      padding: 50px;
+
+    }
+
+    #footer {
+      text-align: center;
+      color: rgb(6, 36, 63);
+      margin-top: 90px;
+    }
+    
+    #error {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    #congratulations {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #pageAgreement {
+      border: 2px solid black;
+      background-color: rgb(140, 193, 243);
+      padding: 5px ;
+      margin: 5px 5px;
+      text-size-adjust: 32px;
+      width:100%;
+    }
+    #pageAbout {
+      border: 2px solid black;
+      background-color: rgb(140, 193, 243);
+      padding: 10px;
+      margin: 5px 5px;
+      text-size-adjust: 32px;
+      width:100%;
+    }
+
+  #pagePersonalData {
+    border: 2px solid black;
+      background-color: rgb(140, 193, 243);
+      padding: 10px;
+      margin: 5px 5px;
+      text-size-adjust: 32px;
+      width:100%;
+  }
+
+#pageInfoUser {
+  border: 2px solid black;
+  background-color: rgb(193, 219, 243);
+  padding: 10px;
+  margin: 5px 5px;
+  text-size-adjust: 32px;
+  width:100%;
+}
+
+#pageAddReport {
+  border: 2px solid black;
+      background-color: rgb(140, 193, 243);
+      padding: 10px;
+      margin: 5px 5px;
+      text-size-adjust: 32px;
+      width:100%;
+}
+#aboutInput{
+  padding: 50px;
+  width:100%;
+  text-size-adjust: 100%;
+}
+
+.Agreement{
+padding-top: 100px;
+width:100%;
+
+}

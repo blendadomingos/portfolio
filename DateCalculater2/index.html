@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <script src="jquery.js"></script>
+  <script src="jquery.mobile.js"></script>
+  <script src="jquery.css.js"></script>
+<head>
+  <title>Data Difference Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin: 20px auto;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      margin-bottom: 15px;
+    }
+
+    .input-field label {
+      display: block;
+      font-weight: bold;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn-calculate {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="page1"></div>
+  <div class="container">
+    <h1>Data Difference Calculator</h1>
+    <div class="input-field">
+      <label for="date1">Date 1:</label>
+      <input type="date" id="date1" required>
+    </div>
+    <div class="input-field">
+      <label for="date2">Date 2:</label>
+      <input type="date" id="date2" required>
+    </div>
+    <button class="btn-calculate">Calculate Difference</button>
+    <div class="result"></div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.btn-calculate').click(function() {
+        var date1 = new Date($('#date1').val());
+        var date2 = new Date($('#date2').val());
+
+        if (!isNaN(date1) && !isNaN(date2)) {
+          var difference = Math.abs(date2 - date1);
+          var daysDifference = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+          $('.result').text('The difference between the dates is: ' + daysDifference + ' days.');
+        } else {
+          $('.result').text('Please enter valid date values for both dates.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
