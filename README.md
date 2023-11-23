@@ -1,5 +1,5 @@
 # portfolio
-![portfolio-3 1 png](https://github.com/blendadomingos/portfolio/assets/125728885/6dbdd6ff-d4b9-4467-98da-4e9cfb7783df)
+![portfolio-1](https://github.com/blendadomingos/portfolio/assets/125728885/1fc00b2a-e9f6-4aef-b670-a30dce2ff269)
 ![portfolio-2](https://github.com/blendadomingos/portfolio/assets/125728885/c9a05811-b143-40d9-bfeb-623b58650925)
 ![portfolio-3](https://github.com/blendadomingos/portfolio/assets/125728885/34662c00-c079-4366-b924-021e4a42c348)
 ![portfolio-3 1 png](https://github.com/blendadomingos/portfolio/assets/125728885/2571454e-f056-413d-ab09-a579283c7ec2)
